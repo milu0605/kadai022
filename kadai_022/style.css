@@ -1,0 +1,94 @@
+h1, p, body {
+    margin: 0;
+    padding: 0;
+}
+
+p, a {
+    font-size: 20px;
+}
+
+
+header {
+    margin-bottom: 20px;
+    background-color: rgb(244, 79, 79);
+    text-align: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+main {
+    margin: 10px; /* 上下左右の余白を10pxに設定 */
+}
+
+#parent {
+    display: flex; /* Flexコンテナにする */
+    justify-content: space-between; /* Flexアイテムを均等な間隔で配置 */
+}
+
+.contents {
+    border: 3px solid rgb(238, 204, 204); /* 線で要素を囲う（太さ3px、色rgb(238, 204, 204)） */
+    flex-basis: 25%; /* 幅を親要素の25%にする */
+    padding: 10px 15px; /* 内の余白を上下10px、左右15pxにする */
+    margin: 20px 0; /* 外の余白を上下20px、左右0にする */
+    text-align: center; /* 中の要素が中央揃えになるようにする */
+}
+
+h2 {
+    font-size: 25px; 
+    text-decoration: underline dotted rgb(236, 122, 122); /* 下線（太さ3px、点線、色rgb(236, 122, 122)）を引く */
+    /* h2要素の前に「●」記号を表示。色はrgb(239, 111, 139) */
+    position: relative; 
+}
+
+h2::before {
+    content: '●';
+    color: rgb(239, 111, 139);
+    position: absolute;
+    left: -20px; /* 位置調整 */
+}
+
+.contents p:nth-of-type(2)::first-letter {
+    font-weight: bold; /* 太字に設定 */
+    color: rgb(97, 206, 249); /* 文字色をrgb(97, 206, 249)に設定 */
+}
+
+.contents img {
+    margin: 10px 0; /* 上下10px、左右0の余白 */
+    width: 70%; /* 幅を70%に設定 */
+}
+
+
+footer {
+    background-color: rgb(244, 79, 79); /* 背景色を指定 */
+    text-align: center; /* 中身の要素を中央揃えにする */
+}
+
+a {
+    color: rgb(255, 255, 255); /* 通常時の文字色を指定 */
+}
+
+a:visited {
+    color: rgb(193, 234, 251); /* 訪問済みの時の文字色を指定 */
+}
+
+a:hover {
+    color: rgb(245, 178, 168); /* マウスカーソルが乗った時の文字色を指定 */
+}
+
+.content {
+    display: flex;
+  }
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 25px;
+    }
+    .content {
+        flex-direction: column;
+    }
+}
